@@ -36,7 +36,9 @@
                         <input name="password" type="password" placeholder="Kata sandi" class="login__input">
                     </div>
 
-                    <a href="#" class="login__forgot">Lupa password?</a>
+                    <a class="login__forgot" href="{{ route('password.request') }}">
+                        Lupa password?
+                    </a>
 
                     <button type="submit" class="login__button">Masuk</button>
 
