@@ -87,6 +87,15 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('program')" :active="request()->routeIs('program')">
+                {{ __('MBKM&JOB') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('software')" :active="request()->routeIs('software')">
+                {{ __('Tele-Assesmen Service') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('about')" :active="request()->routeIs('about')">
+                {{ __('About') }}
+            </x-responsive-nav-link>
         </div>
 
         <!-- Responsive Settings Options -->
