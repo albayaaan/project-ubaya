@@ -35,10 +35,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/program', [ProgramController::class, 'index'])->name('program');
-Route::get('/software', [SoftwareController::class, 'index'])->name('software');
-Route::get('/about', [AboutController::class, 'index'])->name('about');
-
 require __DIR__ . '/auth.php';
 
 Route::get('/profile', function () {
