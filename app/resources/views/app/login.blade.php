@@ -28,12 +28,12 @@
 
                     <div class="login__box">
                         <i class='bx bx-user login__icon'></i>
-                        <input name="email" type="email" placeholder="Email Pengguna" class="login__input">
+                        <input name="email" type="email" placeholder="Email Pengguna" class="login__input" required>
                     </div>
 
                     <div class="login__box">
                         <i class='bx bx-lock-alt login__icon'></i>
-                        <input name="password" type="password" placeholder="Kata sandi" class="login__input">
+                        <input name="password" type="password" placeholder="Kata sandi" class="login__input" required>
                     </div>
 
                     <a class="login__forgot" href="{{ route('password.request') }}">

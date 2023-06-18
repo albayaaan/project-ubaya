@@ -10,8 +10,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon1.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="{{ asset('assets/img/favicon1.png') }}" rel="icon">
+    <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link
@@ -45,7 +45,6 @@
                 <ul>
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                     <li><a class="nav-link scrollto" href="#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="#mbkm">Program</a></li>
                     <li><a class="nav-link scrollto" href="#values">Tele-Assesmen</a></li>
 
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
@@ -56,7 +55,8 @@
                     @endguest
 
                     @auth
-                        <li><a class="nav-link scrollto" href="/profile">{{ Auth::user()->name }}</a></li>
+                        <li><a class="nav-link scrollto"
+                                href="{{ route('profile', ['id' => $user->id]) }}">{{ $user->name }}</a></li>
                         <li>
                             <form action="{{ route('logout') }}" method="POST">
                                 @csrf
@@ -84,7 +84,7 @@
                         Intellegence</h2>
                     <div data-aos="fade-up" data-aos-delay="600">
                         <div class="text-center text-lg-start">
-                            <a href="#about"
+                            <a href="#values"
                                 class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
                                 <span>Mulai</span>
                                 <i class="bi bi-arrow-right"></i>
@@ -116,13 +116,6 @@
                                 AI atau artificial Intelligence merupakan sebuah teknologi yang memungkinkan suatu mesin
                                 bisa bekerja menyerupai manusia.
                             </p>
-                            <div class="text-center text-lg-start">
-                                <a href="#"
-                                    class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
-                                    <span>Read More</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
                         </div>
                     </div>
 
@@ -134,74 +127,6 @@
             </div>
 
         </section><!-- End About Section -->
-
-        <!-- ======= MBKM Section ======= -->
-
-        <section id="mbkm" class="values">
-
-            <div class="container" data-aos="fade-up">
-
-                <header class="section-header">
-                    <p>Program MBKM</p>
-                    <h2>Kampus Merdeka adalah cara terbaik berkuliah. Dapatkan kemerdekaan untuk membentuk masa depan
-                        yang sesuai dengan aspirasi kariermu.</h2>
-                </header>
-
-                <div class="row">
-
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="box">
-                            <img src="{{ asset('assets/img/values-1.png') }}" class="img-fluid" alt="">
-                            <h3>Kampus Mengajar</h3>
-                            <p>sistem yang digunakan untuk mengawasi dan memantau peserta ujian secara online atau di
-                                tempat yang tidak terlihat secara langsung.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
-                        <div class="box">
-                            <img src="{{ asset('assets/img/values-3.png') }}" class="img-fluid" alt="">
-                            <h3>Studi Independen</h3>
-                            <p>pengukuran dan evaluasi aspek-aspek psikologis seseorang, termasuk di dalamnya sifat,
-                                keadaan, nilai, sikap, identitas diri, gaya berpikir, perilaku individu, dan lain-lain.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
-                        <div class="box">
-                            <img src="{{ asset('assets/img/values-3.png') }}" class="img-fluid" alt="">
-                            <h3>Magang Merdeka</h3>
-                            <p>mengukur potensi individu pada tujuh aspek kemampuan (verbal, kuantitatif, penalaran,
-                                spasial, mekanik, penggunaan bahasa, dan klerikal) serta minat pada kegiatan atau
-                                pekerjaan tertentu.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
-                        <div class="box">
-                            <img src="{{ asset('assets/img/values-3.png') }}" class="img-fluid" alt="">
-                            <h3>Pertukaran Mahasiswa</h3>
-                            <p>asesmen juga bisa diartikan sebagai langkah-langkah pencarian tentang kemampuan dan
-                                hambatan yang dialami oleh calon pekerja.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-4 mt-lg-0">
-                        <a href="#" class="btn-daftarmbkm">
-                            <i class="bi bi-arrows-angle-contract"></i>
-                            <span>Daftar Sekarang</span>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 mt-4 mt-lg-0">
-                        <a href="#" class="btn-detailmbkm">
-                            <i class="bi bi-arrow-left-circle"></i>
-                            <span>Detail</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-        <!-- End Values Section -->
 
 
         <!-- ======= Program Section ======= -->
@@ -246,9 +171,9 @@
                     </div>
 
                     <div class="col-lg-4 mt-4 mt-lg-0">
-                        <a href="#" class="btn-daftar">
-                            <i class="bi bi-arrow-left-circle"></i>
+                        <a href="{{ route('test') }}" class="btn-daftar">
                             <span>Mulai Sekarang</span>
+                            <i class="bi bi-arrow-right-circle"></i>
                         </a>
                     </div>
                 </div>
@@ -340,7 +265,7 @@
                     </div>
 
                     <div class="col-lg-6">
-                        <form action="forms/contact.php" method="post" class="php-email-form">
+                        <form method="post" class="php-email-form">
                             <div class="row gy-4">
 
                                 <div class="col-md-6">
