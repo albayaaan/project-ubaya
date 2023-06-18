@@ -28,17 +28,18 @@
 
                     <div class="login__box">
                         <i class='bx bx-user login__icon'></i>
-                        <input name="name" type="text" placeholder="Nama Pengguna" class="login__input">
+                        <input name="name" type="text" placeholder="Nama Pengguna" class="login__input" required>
                     </div>
 
                     <div class="login__box">
                         <i class='bx bx-at login__icon'></i>
-                        <input name="email" type="email" placeholder="Email" class="login__input">
+                        <input name="email" type="email" placeholder="Email" class="login__input" required>
                     </div>
 
                     <div class="login__box">
                         <i class='bx bx-lock-alt login__icon'></i>
-                        <input name="password" type="password" placeholder="Kata sandi" class="login__input">
+                        <input name="password" type="password" placeholder="Kata sandi" class="login__input" required
+                            minlength="8">
                     </div>
 
                     <button type="submit" class="login__button">Daftar</button>
@@ -49,8 +50,8 @@
                     </div>
 
                     <div class="login__social">
-                        <a href="#" class="login__social-icon"><i class='bx bxl-facebook'></i></a>
-                        <a href="#" class="login__social-icon"><i class='bx bxl-google'></i></a>
+                        <a href="#" class="login__social-icon"></a>
+                        <a href="#" class="login__social-icon"></a>
                     </div>
                 </form>
             </div>

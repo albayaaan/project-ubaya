@@ -148,8 +148,8 @@ img{
 
 .login__button{
   display: block;
-  padding: 1rem;
-  margin: 2rem 0;
+  padding : 1.125rem 7rem;
+  margin: 1rem ;
   background-color: var(--first-color);
   color: #FFF;
   font-weight: 600;

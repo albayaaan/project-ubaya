@@ -20,6 +20,22 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->string('username')->nullable();
+            $table->string('status')->nullable();
+            $table->string('alamat')->nullable();
+            $table->string('wa')->nullable();
+            $table->string('phone')->nullable();
+            $table->date('birthday')->nullable();
+            $table->string('website')->nullable();
+            $table->string('github')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('image')->nullable();
+            $table->string('cv')->nullable();
+            $table->string('resume')->nullable();
+            $table->string('ktp')->nullable();
+            $table->string('ijazah')->nullable();
             $table->timestamps();
         });
     }
