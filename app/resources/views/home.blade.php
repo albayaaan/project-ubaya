@@ -36,7 +36,7 @@
     <header id="header" class="header fixed-top">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-            <a href="index.html" class="logo d-flex align-items-center">
+            <a href="/" class="logo d-flex align-items-center">
                 <img src="{{ asset('assets/img/favicon1.png') }}" alt="">
                 <span>Telle Asessment</span>
             </a>
@@ -265,7 +265,8 @@
                     </div>
 
                     <div class="col-lg-6">
-                        <form method="post" class="php-email-form">
+                        <form method="post" action="/message">
+                            @csrf
                             <div class="row gy-4">
 
                                 <div class="col-md-6">
@@ -288,11 +289,7 @@
                                 </div>
 
                                 <div class="col-md-12 text-center">
-                                    <div class="loading">Loading</div>
-                                    <div class="error-message"></div>
-                                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                                    <button type="submit">Send Message</button>
+                                    <button class="btn btn-primary" type="submit">Send Message</button>
                                 </div>
 
                             </div>
@@ -315,7 +312,7 @@
             <div class="container">
                 <div class="row gy-4">
                     <div class="col-lg-5 col-md-12 footer-info">
-                        <a href="index.html" class="logo d-flex align-items-center">
+                        <a href="/" class="logo d-flex align-items-center">
                             <img src="{{ asset('assets/img/favicon1.png') }}" alt="">
                             <span>Telle Assesment</span>
                         </a>

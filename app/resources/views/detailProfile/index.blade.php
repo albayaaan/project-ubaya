@@ -295,7 +295,7 @@
                                             class="material-icons text-info mr-2">Tele-Assesmen Status
                                         </i></h6>
                                     <div>
-                                        Belum melakukan tes
+                                        {{ $user->testFinished ? 'Hasil sedang diproses' : 'Belum mengikuti tes' }}
                                     </div>
                                 </div>
                             </div>

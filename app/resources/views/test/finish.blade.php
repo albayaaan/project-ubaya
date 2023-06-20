@@ -76,78 +76,21 @@
                 <div class="row">
                     <div class="col-lg-6 d-flex flex-column justify-content-center">
                         <h1 data-aos="fade-up">Tele Assesment</h1>
-                        <h2 data-aos="fade-up" data-aos-delay="400">Tele Asesmen Interaktif Psikologi Berbasis
-                            Artificial Intellegence</h2>
-                        <p data-aos="fade-up" data-aos-delay="400">Sebelum Mengikuti Tes Telle assesment, Siapkan waktu
-                            sekurang-kurangnya satu jam dan tempat yang kondusif</p>
+                        <h2 data-aos="fade-up" data-aos-delay="400">Tes Tele Assesment Telah Selesai. Di mohon untuk
+                            menunggu hasil penilaian akhir.</h2>
                         <div data-aos="fade-up" data-aos-delay="600">
-                            <div class="text-center text-lg-start">
-                                <a href="{{ route('test.start1') }}"
-                                    class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                                    <span>Mulai</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
+
                         </div>
                     </div>
                     <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-                        <img src="assets/img/features-2.png" class="img-fluid" alt="">
+                        <img src="{{ asset('assets/img/Waiting2.png') }}" class="img-fluid" alt="">
                     </div>
                 </div>
             </div>
 
         </section><!-- End Hero -->
 
-        <!-- ======= Services Section ======= -->
-        <section id="services" class="services">
 
-            <div class="container" data-aos="fade-up">
-
-                <header class="section-header">
-                    <p>Layanan Tele-Asesmen Kami</p>
-                    <h2>Solusi tele-asesment psikologi interaktif berbasis AI/ML dapat mengubah cara seleksi karyawan
-                    </h2>
-                </header>
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="service-box blue">
-                            <img src="assets/img/features-2.png" class="img-fluid" alt="">
-                            <h3>Tes Kepribadian</h3>
-                            <p>Inovasi : Pengawasan perilaku dengan menggunakan system proctoring gerakan kepala (head
-                                pose), mata (gaze)</p>
-                            <p>Metode : Analisis rreal time analisis gerakan headpose, gaze</p>
-                            <p>Output : Tingkat keyakinan peserta memenuhi prosedur test</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="service-box orange">
-                            <img src="assets/img/features-2.png" class="img-fluid" alt="">
-                            <h3>Tes Bakat dan Minat</h3>
-                            <p>Pengawasan perilaku dengan menggunakan system proctoring gerakan kepala (head pose), mata
-                                (gaze)</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                        <div class="service-box green">
-                            <img src="assets/img/features-2.png" class="img-fluid" alt="">
-                            <h3>Tes Intelegensi</h3>
-                            <p>Inovasi : Computer adaptive test dengan soal-soal yang dibuat dengan stimulus
-                                games/gamification dan cerita</p>
-                            <p>Metode : CAT (Computer Adaptive Test) dengan berbasis item banking dengan IRT (Item
-                                Response Teori)</p>
-                            <p>Output : Profile Intelegensi atau potensi intelegensi</p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section><!-- End Services Section -->
 
     </main><!-- End #main -->
 
@@ -159,7 +102,7 @@
                 <div class="row gy-4">
                     <div class="col-lg-5 col-md-12 footer-info">
                         <a href="/" class="logo d-flex align-items-center">
-                            <img src="assets/img/favicon1.png" alt="">
+                            <img src="{{ asset('assets/img/favicon1.png') }}" alt="">
                             <span>Telle Assesment</span>
                         </a>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis sed, explicabo cum

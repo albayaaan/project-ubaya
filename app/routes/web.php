@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\DetailProfileController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\SoftwareController;
@@ -47,4 +48,16 @@ Route::middleware('auth')->group(function () {
     Route::post('/profile/storeLetter', [DetailProfileController::class, 'storeLetter'])->name('profile.storeLetter');
 
     Route::get('/test', [TestController::class, 'index'])->name('test');
+    Route::get('/test/kepribadian-start', [TestController::class, 'start1'])->name('test.start1');
+    Route::get('/test/kepribadian', [TestController::class, 'test1'])->name('test.test1');
+    Route::post('/test/kepribadian', [TestController::class, 'answer1'])->name('test.answer1');
+    Route::get('/test/minat-bakat-start', [TestController::class, 'start2'])->name('test.start2');
+    Route::get('/test/minat-bakat', [TestController::class, 'test2'])->name('test.test2');
+    Route::post('/test/minat-bakat', [TestController::class, 'answer2'])->name('test.answer2');
+    Route::get('/test/intelegensi-start', [TestController::class, 'start3'])->name('test.start3');
+    Route::get('/test/intelegensi', [TestController::class, 'test3'])->name('test.test3');
+    Route::post('/test/intelegensi', [TestController::class, 'answer3'])->name('test.answer3');
+    Route::get('/test/score', [TestController::class, 'finish'])->name('test.finish');
 });
+
+Route::post('/message', [MessageController::class, 'send'])->name('send');
