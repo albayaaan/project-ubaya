@@ -36,6 +36,10 @@ return new class extends Migration
             $table->string('resume')->nullable();
             $table->string('ktp')->nullable();
             $table->string('ijazah')->nullable();
+            $table->string('test1')->nullable();
+            $table->string('test2')->nullable();
+            $table->string('test3')->nullable();
+            $table->boolean('testFinished')->nullable();
             $table->timestamps();
         });
     }
